@@ -1,4 +1,5 @@
 import 'package:edges_img/colors/colors.dart';
+import 'package:edges_img/splash_screen.dart';
 
 import '../screens/home_page.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primaryColor: kprimary,
       ),
-      home: Home_Page(),
+      home: SplashScreen(),
     );
   }
 }
