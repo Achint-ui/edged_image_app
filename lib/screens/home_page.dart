@@ -42,17 +42,32 @@ class _Home_PageState extends State<Home_Page> {
             // mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                height: 130,
+                height: 210,
                 child: Stack(
                   children: [
                     Container(
-                      height: 130,
+                      height: 150,
                       decoration: BoxDecoration(
                           color: kprimary,
                           borderRadius: BorderRadius.only(
                             bottomLeft: Radius.circular(36),
                             bottomRight: Radius.circular(36),
                           )),
+                    ),
+                    Positioned(
+                      bottom: -15,
+                      left: 0,
+                      right: 0,
+                      child: image != null
+                          ? Image.file(
+                              image!,
+                              width: 160,
+                              height: 160,
+                              fit: BoxFit.cover,
+                            )
+                          : FlutterLogo(
+                              size: 160,
+                            ),
                     )
                   ],
                 ),
@@ -60,16 +75,9 @@ class _Home_PageState extends State<Home_Page> {
               SizedBox(
                 height: 20,
               ),
-              image != null
-                  ? Image.file(
-                      image!,
-                      width: 160,
-                      height: 160,
-                      fit: BoxFit.cover,
-                    )
-                  : FlutterLogo(
-                      size: 160,
-                    ),
+              SizedBox(
+                height: 20,
+              ),
               SizedBox(
                 height: 20,
               ),
